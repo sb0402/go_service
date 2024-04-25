@@ -6,9 +6,8 @@ import (
 	"net"
 
 	"github.com/osteele/liquid"
+	pb "github.com/sb0402/go_service"
 	"google.golang.org/grpc"
-
-	pb "liquid" // Update with your Go package name
 )
 
 type server struct{}
