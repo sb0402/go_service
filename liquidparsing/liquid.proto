@@ -2,7 +2,7 @@
 syntax = "proto3";
 
 package liquid;
-option go_package = "liquidparsing/liquidparsingpb";
+option go_package = "/liquidparsing";
 
 service LiquidParsing {
     rpc ParseAndRenderString(Template) returns (ParsedResult) {}

@@ -6,7 +6,7 @@ import (
 	"net"
 
 	"github.com/osteele/liquid"
-	pb "github.com/sb0402/go_service/liquidparsing"
+	pb "github.com/sb0402/go_service/liquidparsing/liquidparsingpb"
 	"google.golang.org/grpc"
 )
 
