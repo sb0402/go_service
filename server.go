@@ -12,6 +12,11 @@ import (
 
 type server struct{}
 
+// mustEmbedUnimplementedLiquidParsingServer implements liquidparsingpb.LiquidParsingServer.
+func (s *server) mustEmbedUnimplementedLiquidParsingServer() {
+	panic("unimplemented")
+}
+
 func (s *server) ParseAndRenderString(ctx context.Context, in *pb.Template) (*pb.ParsedResult, error) {
 	engine := liquid.NewEngine()
 	template := make(map[string]interface{})
@@ -34,6 +39,7 @@ func main() {
 	}
 
 	s := grpc.NewServer()
+
 	pb.RegisterLiquidParsingServer(s, &server{})
 	if err := s.Serve(listener); err != nil {
 		log.Fatalf("Failed to serve: %v", err)
