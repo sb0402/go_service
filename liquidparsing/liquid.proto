@@ -1,0 +1,17 @@
+
+syntax = "proto3";
+
+package liquid;
+option go_package = "liquidparsing/liquidparsingpb";
+
+service LiquidParsing {
+    rpc ParseAndRenderString(Template) returns (ParsedResult) {}
+}
+
+message Template {
+  string html_part = 1;
+  map<string, string> variables = 2;
+}
+message ParsedResult {
+  string result = 1;
+}
