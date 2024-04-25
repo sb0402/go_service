@@ -6,7 +6,7 @@ import (
 	"net"
 
 	"github.com/osteele/liquid"
-	pb "github.com/sb0402/go_service"
+	pb "github.com/sb0402/go_service/liquidparsing"
 	"google.golang.org/grpc"
 )
 
@@ -14,7 +14,13 @@ type server struct{}
 
 func (s *server) ParseAndRenderString(ctx context.Context, in *pb.Template) (*pb.ParsedResult, error) {
 	engine := liquid.NewEngine()
-	result, err := engine.ParseAndRenderString(in.HtmlPart, in.Variables)
+	template := make(map[string]interface{})
+	for key, value := range in.Variables {
+		template[key] = value
+	}
+	html := template["html_part"].(string)
+	delete(template, "html_part")
+	result, err := engine.ParseAndRenderString(html, template)
 	if err != nil {
 		return nil, err
 	}
