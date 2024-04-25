@@ -10,11 +10,8 @@ import (
 	"google.golang.org/grpc"
 )
 
-type server struct{}
-
-// mustEmbedUnimplementedLiquidParsingServer implements liquidparsingpb.LiquidParsingServer.
-func (s *server) mustEmbedUnimplementedLiquidParsingServer() {
-	panic("unimplemented")
+type server struct {
+	pb.UnimplementedLiquidParsingServer
 }
 
 func (s *server) ParseAndRenderString(ctx context.Context, in *pb.Template) (*pb.ParsedResult, error) {
