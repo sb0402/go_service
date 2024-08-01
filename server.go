@@ -43,7 +43,7 @@ func (s *server) ParseAndRenderString(ctx context.Context, in *pb.Data) (*pb.Par
 }
 
 func main() {
-	lis, err := net.Listen("tcp", "34.132.53.236:50052")
+	lis, err := net.Listen("tcp", "0.0.0.0:5005")
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
