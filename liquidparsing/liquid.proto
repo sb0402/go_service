@@ -1,14 +1,14 @@
 
 syntax = "proto3";
 
-package liquid;
+package liquidgrpc;
 option go_package = "liquidparsing/liquidparsingpb";
 
-service LiquidParsing {
-    rpc ParseAndRenderString(Template) returns (ParsedResult) {}
+service LiquidParsingGrpc {
+    rpc ParseAndRenderString(Data) returns (ParsedResult) {}
 }
 
-message Template {
+message Data {
   map<string, string> variables = 1;
 }
 message ParsedResult {

@@ -1,0 +1,39 @@
+{
+    "data": {
+        "campaign": {
+        "id": 17872,
+        "name": "Liquid_tag_test___20230421T05283966",
+        "from_email": "rahul.kaushal@maropost.com",
+        "subject": "Send Test Camp- Cloud - Send Test Camp- Cloud - Please Ignore"
+      },
+        "contact": {
+            "id" : 10125805,
+            "email" : "akshat@maropost.com",
+            "first_name" : "Akshat",
+            "last_name" : "Akshat"
+        },
+        "other":{"time_stamp" : "April 21st, 2023"},
+        "dynamic_content": {
+            "dc_archive_2" : "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><p>Original Content Feed --  Daily Money</p></body></html>\n",
+            "dc_archive_1" : "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n\n"
+        },
+        "table": {
+            "colin_test" : { "Email" : "Akshat@maropost.com", "ID" : 34, "Name" : "Akshat", "City" : "SAS", "state" : "PB", "Link" : "google.com", "subscription" : "" },
+            "colin_test_all" : [{ "Email" : "Akshat@maropost.com", "ID" : 34, "Name" : "Akshat", "City" : "SAS", "state" : "PB", "Link" : "google.com", "subscription" : "" }],
+            "kevintestingtable" : { "email" : "Akshat@maropost.com", "firstname" : "Akshat Gupta", "ID" : 232 },
+            "kevintestingtable_all" : [{ "email" : "Akshat@maropost.com", "firstname" : "Akshat Gupta", "ID" : 232 }],
+            "jasmeen" : { "Email" : "Akshat@maropost.com", "oder_date" : "2023-04-20T05:00:00.000+00:00" },
+            "jasmeen_all" : [{ "Email" : "Akshat@maropost.com", "oder_date" : "2023-04-20T05:00:00.000+00:00" }],
+            "ana_1702_1" : { "e1" : "Akshat@maropost.com", "name" : "Akshat ", "b1" : 1, "B2" : 0 },
+            "ana_1702_1_all" : [{ "e1" : "Akshat@maropost.com", "name" : "Akshat ", "b1" : 1, "B2" : 0 }],
+            "ana_1702_2" : { "e1" : "Akshat@maropost.com", "n1" : "Akshat_RelationalTable", "boo2" : 0, "em1" : "Akshat@maropost.com" },
+            "ana_1702_2_all" : [{ "e1" : "Akshat@maropost.com", "n1" : "Akshat_RelationalTable", "boo2" : 0, "em1" : "Akshat@maropost.com" }]
+        },
+        "email": { "message_id" : "36e630e0-c25b-013b-3f23-42010a800108@mp2203.com"},
+        "template": {
+            "av_1" : "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>\r\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n\t<title></title>\r\n</head>\r\n<body>\r\n<p>List of Indian TV Series</p>\r\n\r\n<ul>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Aadha_Full\" title=\"Aadha Full\" data-mp-url-id=\"446ad36480b3cc10086a8d8c8a87813d326b93c9\" mp-encode=\"false\">Aadha Full</a></li>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Aanpirannol\" title=\"Aanpirannol\" data-mp-url-id=\"b0f25501b64afa6397d7975d82ceb8bd67ef5f16\" mp-encode=\"false\">Aanpirannol</a></li>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Addham\" title=\"Addham\" data-mp-url-id=\"2be6a345395dc8e2935e826016e3d337286b48fa\" mp-encode=\"false\">Addham</a></li>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Agent_Anand_Santhosh\" title=\"Agent Anand Santhosh\" data-mp-url-id=\"e9941691b827fa6ea34c501f86e182b77d3cfe19\" mp-encode=\"false\">Agent Anand Santhosh</a></li>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Agnipariksha_(2021_TV_series)\" title=\"Agnipariksha (2021 TV series)\" data-mp-url-id=\"13e6b089e0332c3ef875c3f9376214bf5101ce11\" mp-encode=\"false\">Agnipariksha (2021 TV series)</a></li>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Amaravati_ki_Kathayein\" title=\"Amaravati ki Kathayein\" data-mp-url-id=\"14650636b8ae36cb0fd2fdcc31fb826ab9243af4\" mp-encode=\"false\">Amaravati ki Kathayein</a></li>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Amma_Makal\" title=\"Amma Makal\" data-mp-url-id=\"e3a1fceb6e3c61b7051a0871a03408c2084c8c59\" mp-encode=\"false\">Amma Makal</a></li>\r\n\t<li><a href=\"https://en.wikipedia.org/wiki/Ammayariyathe\" title=\"Ammayariyathe\" data-mp-url-id=\"306e26b53439d75e87e4d886457dc4c98cab38cc\" mp-encode=\"false\">Ammayariyathe</a></li>\r\n</ul>\r\n</body>\r\n</html>\n",
+            "av_2" : "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>\r\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n\t<title></title>\r\n</head>\r\n<body>\r\n<p>List of Indian Rivers flowing North to South</p>\r\n\r\n<ul>\r\n\t<li><span style=\"display:block\">The Himalayan rivers (North Indian rivers)</span></li>\r\n\t<li><span style=\"display:block\">The Peninsular rivers ( South Indian rivers)</span></li>\r\n\t<li><span style=\"display:block\">Ganga</span></li>\r\n\t<li>Yamuna</li>\r\n\t<li>Son</li>\r\n</ul>\r\n</body>\r\n</html>\n"
+        },
+        "coupon":{"12jul2019" : "1234ABDJA", "coupon_deals" : "BLKCAT13", "avk_cb" : "XAFD234"}
+    }
+}

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"log"
 	"net"
 
@@ -11,34 +12,46 @@ import (
 )
 
 type server struct {
-	pb.UnimplementedLiquidParsingServer
+	pb.UnimplementedLiquidParsingGrpcServer
 }
 
-func (s *server) ParseAndRenderString(ctx context.Context, in *pb.Template) (*pb.ParsedResult, error) {
+func (s *server) ParseAndRenderString(ctx context.Context, in *pb.Data) (*pb.ParsedResult, error) {
 	engine := liquid.NewEngine()
+	var result string
+	var err error
 	template := make(map[string]interface{})
 	for key, value := range in.Variables {
-		template[key] = value
+		if key == "html_part" {
+			template[key] = value // Directly assigning the HTML part
+			continue
+		}
+		var jsonData map[string]interface{}
+		// Attempt to unmarshal the value as JSON
+		if err := json.Unmarshal([]byte(value), &jsonData); err == nil {
+			template[key] = jsonData
+		}
 	}
 	html := template["html_part"].(string)
-	delete(template, "html_part")
-	result, err := engine.ParseAndRenderString(html, template)
-	if err != nil {
-		return nil, err
+	for i := 0; i < 123000; i++ {
+		result, err = engine.ParseAndRenderString(html, template)
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 	return &pb.ParsedResult{Result: result}, nil
+
 }
 
 func main() {
-	listener, err := net.Listen("tcp", ":50051") // Use any available port
+	lis, err := net.Listen("tcp", "34.132.53.236:50052")
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
+	log.Printf("Server listening at %v", lis.Addr())
 
 	s := grpc.NewServer()
-
-	pb.RegisterLiquidParsingServer(s, &server{})
-	if err := s.Serve(listener); err != nil {
+	pb.RegisterLiquidParsingGrpcServer(s, &server{})
+	if err := s.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v", err)
 	}
 }
